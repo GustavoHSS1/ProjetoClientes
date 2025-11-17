@@ -9,15 +9,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
+    "@prisma/client": "^6.19.0",
     "@types/node": "^24.10.0",
     "prisma": "^6.19.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
     "@fastify/cors": "^11.1.0",
-    "@prisma/client": "^6.19.0",
+    "@prisma/config": "^6.19.0",
+    "bson": "^7.0.0",
+    "dotenv": "^16.6.1",
     "fastify": "^5.6.1",
     "tsx": "^4.20.6"
   }
