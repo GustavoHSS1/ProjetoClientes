@@ -4,6 +4,11 @@ import cors from '@fastify/cors';
 
 const app = Fastify({ logger: true })
 
+app.setErrorHandler((error, request, reply) => {
+    const message = error instanceof Error ? error.message : 'erro desconhecido';
+    reply.code(400).send({ message })
+})
+
 const start = async () => {
   await app.register(cors)
   await app.register(routes);
