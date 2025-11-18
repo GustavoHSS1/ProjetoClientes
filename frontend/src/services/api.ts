@@ -15,7 +15,7 @@ export async function createCustomer(payload:{ name: string; email: string }){
 }
 
 export async function deleteCustomer(id: string){
-  const res = await api.delete(`/customer?id=${id}`)
+  const res = await api.delete(`/customer/${id}`)
   return res.data
 }
 
