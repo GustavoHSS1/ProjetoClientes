@@ -67,12 +67,12 @@ export default function CustomerList(){
           customers.length === 0 ? <p>Nenhum cliente</p> : (
             customers.map(c => (
               <div className="customer-item" key={c.id}>
-                <div>
-                  <strong>{c.name}</strong>
-                  <div style={{fontSize:12}}>{c.email}</div>
+                <div className="customer-meta">
+                  <div className="customer-name">{c.name}</div>
+                  <div className="customer-email">{c.email}</div>
                 </div>
-                <div>
-                  <button onClick={()=>handleDelete(c.id)}>Remover</button>
+                <div className="customer-actions">
+                  <button className="btn-danger" onClick={()=>handleDelete(c.id)}>Remover</button>
                 </div>
               </div>
             ))
